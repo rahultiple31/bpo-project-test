@@ -31,14 +31,18 @@ The `npm test` command runs the build first and then checks that the generated `
 
 
 # DevOps points
+```
+
+```
 
 1. Create GitHub account
 
 2. Need to create CICD pipeline (.github/workflows/ci-cd.yml)
-    a. deployment.yaml
-    b. secret.yaml
-    c. hpa.yaml
-    d. namespace.yaml
+    a. code checkout
+    b. code build
+    c. code test
+    d. crate image
+    e. push docker image to DockerHub
 3. Create Dockerfile use nginx base image
 4. Create nginx.conf for Dockerfile images
 5. .dockerignore
@@ -48,3 +52,7 @@ The `npm test` command runs the build first and then checks that the generated `
     c. hpa.yaml
     d. namespace.yaml
 7. DockerHUB account for docker image storage
+8. Create Kubernetes cluster
+9. install argocd
+10. deploy application on k8s
+11. test application
